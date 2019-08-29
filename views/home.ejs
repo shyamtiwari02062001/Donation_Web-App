@@ -1,0 +1,48 @@
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" 
+                            data-target="#formModal" style=" position: fixed;
+                            bottom: 40px;
+                            right: 10px; height: 100px;
+                              width: 100px;
+                              border-radius: 50%;
+                              border: 10px solid red;">
+                                    Add RECIPIES
+                                  </button>
+                                  
+                                  <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                          <div class="modal-content">
+                                              <form action="/add" method="POST">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title" id="myModalLabel">ADD RECIPIES</h5>
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                              </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                    <div class="form-group">
+                                                            <label for="name">RECIPIE NAME</label>
+                                                            <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="ENTER THE RECEPIE NAME">
+                                                            
+                                                          </div>
+                                                          <div class="form-group">
+                                                                <label>Ingredients</label>
+                                                                <textarea class="form-control" name="ingredients"></textarea>
+                                                          </div>
+                                                         <div class="form-group">
+                                                                <label>Direction</label>
+                                                                <textarea class="form-control" name="direction"></textarea>
+                                                          </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                              <input type="submit" class="btn btn-primary" value="submit"/>
+                                            </div>
+                                        </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                            
+                            
+                            
