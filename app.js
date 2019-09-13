@@ -38,7 +38,7 @@ app.use(express.static('./public'));
 
 app.post('/add',function(req,res){
     console.log(req.body.name);
- client.query("INSERT INTO recipies(name,ingredients,direction)values($1,$2,$3);",[req.body.name,req.body.ingredients,req.body.direction],function(err,result)
+ client.query("INSERT INTO donation(name,thing,amount,number)values($1,$2,$3,$4);",[req.body.name,req.body.thing,req.body.amount,req.body.number],function(err,result)
   {
     if(err)
     {
@@ -49,14 +49,14 @@ app.post('/add',function(req,res){
 
 });
 app.get('/', function(req, res) {
-    client.query("SELECT * FROM recipies",function(err,result){
+    client.query("SELECT * FROM donation",function(err,result){
         if(err){
             return console.error('error running query',err);
         }
-        res.render('index',{recipies:result.rows});
+        res.render('index',{donation:result.rows});
     });
   });
 
 //port
-app.listen(8000); //our app is running on port no 8080
-console.log('Server started at port 8000');
+app.listen(8080); //our app is running on port no 8080
+console.log('Server started at port 8080');
